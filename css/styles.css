@@ -116,6 +116,12 @@ body {
   transition: background var(--animation-time) var(--animation-time-distribution);
 }
 
+.common-button:hover,
+.common-button:focus{
+  background: var(--button-accent-color);
+}
+
+
 /* general rules */
 
 /*Logo*/
@@ -365,6 +371,15 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.form-connection .sign-input::placeholder{
+ font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: var(--footer-links-color); 
+}
+
 .form-connection button{
   display: flex;
   align-items: center;
@@ -399,13 +414,6 @@ body {
   padding-right: 31px;
   text-align: center;
 }
-
-.hero-button:hover,
-.hero-button:focus,
-.form-connection button:hover {
-  background: var(--button-accent-color);
-}
-
 
 /*advantages*/
 
@@ -848,7 +856,21 @@ body {
   transform: translate(-50%, -50%);
   width: 528px;
   height: 581px;
+  padding: 40px;
+
   background-color: #fff;
+}
+
+.modal-urge{
+  display: block;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--black-color);
 }
 
 .backdrop.is-hidden{
@@ -872,12 +894,76 @@ body {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: var(--white-color);
+
+  transition: fill var(--animation-time) var(--animation-time-distribution);
 }
 
 .modal-button-close:hover,
 .modal-button-close:focus{
   fill: var(--accent-color);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
-  0px 4px 4px rgba(0, 0, 0, 0.06), 
-  1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.form-fild{
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-comment{
+  margin-bottom: 25px;
+}
+
+.add-comment textarea{
+  width: 100%;
+  max-height: 120px;
+  padding: 12px 16px;
+  resize: none;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.add-comment textarea::placeholder{
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-fild input{
+  padding: 14px 15px;
+  max-height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-fild label{
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.acceptance-box{
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.acceptance-box input{
+  margin-right: 9px;
+}
+
+.acceptance-box a{
+  color: var(--accent-color);
+}
+
+.modal .common-button{
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
