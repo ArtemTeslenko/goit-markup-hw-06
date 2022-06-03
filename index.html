@@ -52,7 +52,9 @@
     <section class="hero">
       <div class="container">
         <h1 class="main-heading">Эффективные решения<br />для вашего бизнеса</h1>
-        <button data-modal-open type="button" class="button hero-button">Заказать услугу</button>
+        <button data-modal-open type="button" class="button hero-button common-button">
+          Заказать услугу
+        </button>
       </div>
     </section>
     <!--Our advantages-->
@@ -355,8 +357,20 @@
 
         <form action="" class="form-connection">
           <label for="mail">Подпишитесь на рассылку</label>
-          <input type="email" id="mail" placeholder="E-mail" />
-          <button type="submit">Подписаться</button>
+          <div class="footer-form-wrapper">
+            <input
+              class="sign-input"
+              type="email"
+              id="mail"
+              placeholder="E-mail"
+              name="user-email"
+            />
+            <button class="common-button" type="submit">
+              Подписаться<svg class="sign-ic-plane" width="24px" height="24px">
+                <use href="./images/symbol-defs.svg#icon-paper-plane"></use>
+              </svg>
+            </button>
+          </div>
         </form>
       </div>
     </footer>
