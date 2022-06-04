@@ -928,6 +928,8 @@ body {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border-color var(--animation-time) var(--animation-time-distribution);
 }
 
 .add-comment textarea::placeholder{
@@ -985,6 +987,8 @@ body {
   left: 15px;
   top: 29px;
   position: absolute;
+
+  transition: fill var(--animation-time) var(--animation-time-distribution);
 }
 
 .acceptance-box input{
@@ -993,23 +997,51 @@ body {
 }
 
 .acceptance-box label{
+  position: relative;
   display: flex;
   align-items: center;
 }
 
-.box{
+.acceptance-box svg{
+  margin-right: 8px;
+}
+
+.acceptance-box input:checked + .border{
+  opacity: 0;
+}
+
+.acceptance-box .border{
+  transition: opacity var(--animation-time) var(--animation-time-distribution);
+}
+
+.acceptance-box .check{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: opacity var(--animation-time) var(--animation-time-distribution);
+}
+
+.acceptance-box input:checked ~ .check{
+  opacity: 1;
+}
+
+/* .box{
   width: 16px;
   height: 15px;
   margin-right: 8px;
   border: 2px solid var(--black-color);
   border-radius: 2px;
-}
 
-.acceptance-box input:checked + .box{
+  transition: background-color var(--animation-time) var(--animation-time-distribution), border-color var(--animation-time) var(--animation-time-distribution);
+} */
+
+/* .acceptance-box input:checked + .box{
   background-color: var(--accent-color);
   background-image: url(../images/check.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-origin: border-box;
   border-color: transparent;
-}
+} */
