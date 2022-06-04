@@ -387,16 +387,25 @@
           <div class="form-fild">
             <label for="name">Имя</label>
             <input type="text" name="user-name" id="name" />
+            <svg class="form-icon human" width="18px" height="18px">
+              <use href="./images/symbol-defs.svg#icon-person-afro"></use>
+            </svg>
           </div>
 
           <div class="form-fild">
             <label for="phone">Телефон</label>
             <input type="tel" name="user-name" id="phone" />
+            <svg class="form-icon phone" width="18px" height="18px">
+              <use href="./images/symbol-defs.svg#icon-phone-black"></use>
+            </svg>
           </div>
 
           <div class="form-fild">
             <label for="mail">Почта</label>
             <input type="email" name="user-email" id="mail" />
+            <svg class="form-icon envelope" width="18px" height="18px">
+              <use href="./images/symbol-defs.svg#icon-email-black"></use>
+            </svg>
           </div>
 
           <div class="form-fild add-comment">
@@ -411,9 +420,10 @@
           </div>
 
           <div class="acceptance-box">
-            <input type="checkbox" name="acceptance" id="check" />
-            <label for="check"
-              >Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label
+            <label>
+              <input type="checkbox" name="acceptance" />
+              <span class="box"></span> Соглашаюсь с рассылкой и принимаю
+              <a href="">Условия договора</a></label
             >
           </div>
 

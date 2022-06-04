@@ -907,6 +907,7 @@ body {
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .add-comment{
@@ -934,10 +935,27 @@ body {
 }
 
 .form-fild input{
-  padding: 14px 15px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 42px;
   max-height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border-color var(--animation-time) var(--animation-time-distribution);
+}
+
+.form-fild input:hover,
+.form-fild input:focus,
+.form-fild textarea:hover,
+.form-fild textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.form-fild input:hover + .form-icon,
+.form-fild input:focus + .form-icon{
+  fill: var(--accent-color);
 }
 
 .form-fild label{
@@ -948,22 +966,50 @@ body {
 }
 
 .acceptance-box{
-  display: flex;
   margin-bottom: 30px;
-  justify-content: center;
-  align-items: center;
-}
-
-.acceptance-box input{
-  margin-right: 9px;
 }
 
 .acceptance-box a{
   color: var(--accent-color);
+  margin-left: 3px;
+  text-decoration-line: underline;
 }
 
 .modal .common-button{
   display: block;
   margin: 0 auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.form-icon{
+  left: 15px;
+  top: 29px;
+  position: absolute;
+}
+
+.acceptance-box input{
+  appearance: none;
+  position: absolute;
+}
+
+.acceptance-box label{
+  display: flex;
+  align-items: center;
+}
+
+.box{
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  border: 2px solid var(--black-color);
+  border-radius: 2px;
+}
+
+.acceptance-box input:checked + .box{
+  background-color: var(--accent-color);
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: border-box;
+  border-color: transparent;
 }
