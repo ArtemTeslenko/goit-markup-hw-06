@@ -369,6 +369,13 @@ body {
   background-color: transparent;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
+  outline: none;
+
+  transition: border-color var(--animation-time) var(--animation-time-distribution);
+}
+
+.form-connection .sign-input:focus{
+  border-color: var(--accent-color);
 }
 
 .form-connection .sign-input::placeholder{
@@ -937,25 +944,20 @@ body {
 }
 
 .form-fild input{
-  padding-top: 14px;
-  padding-bottom: 14px;
   padding-left: 42px;
-  max-height: 40px;
+  min-height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
   transition: border-color var(--animation-time) var(--animation-time-distribution);
 }
 
-.form-fild input:hover,
 .form-fild input:focus,
-.form-fild textarea:hover,
 .form-fild textarea:focus {
   border-color: var(--accent-color);
   outline: none;
 }
 
-.form-fild input:hover + .form-icon,
 .form-fild input:focus + .form-icon{
   fill: var(--accent-color);
 }
@@ -975,6 +977,10 @@ body {
   color: var(--accent-color);
   margin-left: 3px;
   text-decoration-line: underline;
+}
+
+.acceptance-box a:hover{
+  text-decoration-line: none;
 }
 
 .modal .common-button{
@@ -1011,7 +1017,7 @@ body {
 }
 
 .acceptance-box .border{
-  transition: opacity var(--animation-time) var(--animation-time-distribution);
+  transition: opacity var(--animation-time) var(--animation-time-distribution), fill var(--animation-time) var(--animation-time-distribution);
 }
 
 .acceptance-box .check{
@@ -1025,6 +1031,10 @@ body {
 
 .acceptance-box input:checked ~ .check{
   opacity: 1;
+}
+
+.acceptance-box input:focus + .border{
+  fill: var(--accent-color);
 }
 
 /* .box{
